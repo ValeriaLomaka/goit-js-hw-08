@@ -3,7 +3,7 @@ const form = document.querySelector('.feedback-form');
 const email = document.querySelector('[name="email"]');
 const message = document.querySelector('[name="message"]');
 const STORAGE_KEY = 'feedback-form-state';
-let formData = {};
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
 form.addEventListener('input', throttle(onFormInput,500));
 form.addEventListener('submit',onFormSubmit);
