@@ -23,6 +23,7 @@ function onFormSubmit(event) {
     localStorage.removeItem(STORAGE_KEY);
     console.log(formData);
     event.currentTarget.reset();
+    formData = {};
 }
 
 function poppulateData() {
